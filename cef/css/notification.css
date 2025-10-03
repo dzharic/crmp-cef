@@ -1,0 +1,49 @@
+.titlenot {
+	font-size: 18px;
+	color: white;
+    margin-left: 15px;
+    line-height: 2;
+}
+.textnot {
+    font-size: 13px;
+    color: white;
+    margin-left: 15px;
+    line-height: 1.5;
+}
+.notification {
+    width: auto;
+    max-width: 22%;
+    background: rgba(26,28,33,0.93);
+    height: auto;
+    right: -40%;
+	bottom: 0;
+	position: absolute;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+	/*transition: right .5s linear;*/
+	animation: showNot 2s forwards, slide-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 5s both;
+}
+@keyframes showNot {
+    0%, 99% {
+        transition: right .5s linear;
+    }
+    100% {
+        right: 0;
+    }
+}
+@keyframes slide-right {
+  0% {
+    /*transform: translateX(0);*/
+    transition: left .5s linear;
+  }
+  100% {
+    right: -30%;
+  }
+}
+.notification:hover {
+	right: 0;
+}

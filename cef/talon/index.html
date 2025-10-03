@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Project</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/chat.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="talon" style="display:block;">
+			<img src="img/ipad.png" class="ipad-img">
+            <div class="talon_background">
+                <a class="talon_zapis" id="talon_zapis">Запись к врачу</a>
+                <button class="box_1" id="box_1" onclick="mainButton(1)">Записаться на <br>бесплатный приём</button>
+                <button class="box_2" id="box_2" onclick="mainButton(2)">Платный приём</button>
+                <button class="box_3" id="box_3" onclick="mainButton(3)">Ознакомиться с <br>расписанием
+				</button>
+                <img src="img/raspis.jpg" id="raspis-id" class="raspis-img" style="width: 65px; height: 66px;">
+				<img src="img/exit.png" id="exit_talon" class="exit-talon" onclick="mainButton(4)">
+            </div>
+			<div id="result_talon" style="display:none;">
+			<img src="img/exit.png" id="exit_talon-move" class="exit_talon-move" style="display:none;" onclick="mainButton(4)">
+				<a id="result_text" style="display:none;" class="result_text"><font color="#635b59"><font size="5px">Ваш талон на запись</font></font><br><br><font color="#1d9cad"><font size="5px">Запись на приём к врачу произведена успешно</font><br><br></font>
+				<font color="#1d9cad"><font size="6px">Номер талона является подтверждением<br>Вашей записи и может потребоваться при<br>Визите к врачу</font></a>
+				<a id="talon_text" class="talon_text"><font color="#1d9cad"><font size="7px">Номер вашего талона</font></font></a>
+				<a id="number_talon" class="number_talon"><font color="#1d9cad">777777</font></a>
+			</div>
+			<div id="pay_talon" style="display:none;">
+				<button id="yes_button" class="yes_button" style="display: none;">
+					<span class="innerButton">Оплатить через <br>Google Pay</span>
+				</button>
+				<img src="img/pay.png" id="pay_img" class="pay_img" style="display: none; width: 65px; height: 66px;">
+				<a id="pay_text" style="display:none;" class="pay_text"><font color="#635b59"><font size="5px">Платный приём</font></font><br><br><font color="#1d9cad"><font size="5px">Вы хотите записаться на платный приём?</font><br><br></font>
+				<font color="#1d9cad"><font size="6px">Это будет стоить: 5.000 при этом вы получите<br><br>1. Приём без очереди<br>2. Бесплатные анализы<br>3. Бесплатные лекарства</font></a>
+				<button id="no_button" class="no_button" style="display: none;">Отказаться</button>
+				<img src="img/exit.png" id="exit_talon-move1" class="exit_talon-move1" style="display:none;" onclick="mainButton(4)">
+			</div>
+        </div>
+        <div id="auth" style="display:none;">
+            <div class="auth_background">
+            </div>
+            <a class="auth_main_text">Авторизация</a>
+            <a class="auth_text">Аккаунт с данным именем уже зарегистрирован<br>Нажмите кнопку: Далее<br>Чтобы перейти к вводу данных</a>
+            <button class="auth_main_button">Далее</button>
+        </div>
+        <div id="chat" style="display:none;">
+            <div class="chat-category">
+                <div class="background_messages">
+                    <div class="messages" id="message">
+                    </div>
+                </div>
+                <div id="chat_on" style="display: none" hidden>
+                    <div class="chat-input" style="display: block; width: 520px; margin-top:70px;">
+                        <input id="focus" placeholder="Введите ваше сообщение" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+	function EnableText()
+	{
+		document.getElementById('result_text').style.display='block';
+		document.getElementById('talon_text').style.display='block';
+		document.getElementById('number_talon').style.display='block';
+		document.getElementById('exit_talon-move').style.display='block';
+		cef.on("set_number_talon", (number) => {
+			document.getElementById('number_talon').innerHTML = number;
+		});
+	}
+	function EnablePayText()
+	{
+		document.getElementById('pay_text').style.display='block';
+		document.getElementById('yes_button').style.display='block';
+		document.getElementById('no_button').style.display='block';
+		document.getElementById('pay_img').style.display='block';
+		document.getElementById('exit_talon-move1').style.display='block';
+	}
+    function mainButton(type) {
+        if(type == 1)
+		{
+			document.getElementById('box_1').style.display='none';
+			document.getElementById('box_2').style.display='none';
+			document.getElementById('box_3').style.display='none';
+			document.getElementById('raspis-id').style.display='none';
+			document.getElementById('talon_zapis').style.display='none';
+			document.querySelector(".ipad-img").classList.toggle("ipad-img-talon");
+			document.getElementById('result_talon').style.display='block';
+			document.querySelector(".talon_background").classList.toggle("talon_background-remove");
+			document.getElementById('exit_talon').style.display='none';
+			setInterval(EnableText, 3000);
+		}
+		if(type == 2)
+		{
+			document.getElementById('box_1').style.display='none';
+			document.getElementById('box_2').style.display='none';
+			document.getElementById('box_3').style.display='none';
+			document.getElementById('raspis-id').style.display='none';
+			document.getElementById('talon_zapis').style.display='none';
+			document.getElementById('exit_talon').style.display='none';
+			document.querySelector(".ipad-img").classList.toggle("ipad-img-talon");
+			document.getElementById('pay_talon').style.display='block';
+			document.querySelector(".talon_background").classList.toggle("talon_background-remove");
+			document.getElementById('exit_talon').style.display='none';
+			setInterval(EnablePayText, 3000);
+		}
+		if(type == 4)
+		{
+			return console.log("привет");
+		}
+		console.log(type);
+    }
+	
+
+    function isInterfaceHidden(interface) {
+        var interface_elem = document.getElementById(interface);
+
+        if (interface_elem !== null) {
+            return interface_elem.hidden;
+        } else {
+            return undefined;
+        }
+    }
+
+    function showInterface(interface, show) {
+        if (isInterfaceHidden(interface) !== undefined) {
+            var interface_elem = document.getElementById(interface);
+
+            interface_elem.hidden = !show;
+
+            if (show) {
+                interface_elem.style = 'display: block';
+            } else {
+                interface_elem.style = `display: none`;
+            }
+        }
+    }
+    document.querySelector('input').addEventListener('keydown', function(e) {
+        if (e.keyCode === 13) {
+            addMessage(-1, this.value);
+            this.value = "";
+        }
+    });
+
+    addEventListener("keydown", function(e) {
+        if (e.keyCode === 117) {
+            if (isInterfaceHidden("chat_on")) {
+                showInterface("chat_on", true);
+            } else {
+                showInterface("chat_on", false);
+            }
+        }
+    });
+
+    function addMessage(t, e) {
+        let add_message = document.getElementById('message');
+        while (-1 != e.search("{")) e = e.replace(/{(?<color>......)}/g, '<span style="color: #$<color>">')
+        let html = "<span class=\"message\" style='color:" + t + "'>" + e + "</span>";
+        add_message.innerHTML += html;
+        document.getElementById("message").scrollTop = document.getElementById("message").scrollHeight;
+    };
+</script>
+
+</html>

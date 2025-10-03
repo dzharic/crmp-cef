@@ -1,0 +1,145 @@
+*,*::after,*::before{margin: 0;padding: 0;box-sizing: border-box;}
+p,h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
+button{cursor: pointer;}
+
+.wrapper{
+    font-family: 'Rubik', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109.48deg, rgba(53, 53, 53, 0.94) 26.59%, rgba(60, 60, 60, 0.91) 51.84%, #484848 81.95%);
+}
+.header{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-top: 5vh;
+    span{
+        color: #FFCD1D;
+    }
+    .info{
+        text-align: center;
+        padding-top: 2vh;
+        font-size: 1.3vw;
+    }
+    .logo{
+        .title{
+            font-size: 2.8vw;
+        }
+        .subtitle{
+            font-size: 2.3vw;
+        }
+    }
+    .exit{
+        margin: 2vh;
+        transition: transform .5s,opacity .5s;
+        &:hover{
+            opacity: .7;
+            transform: scale(1.2);
+        }
+    }
+}
+@keyframes carAnimation {
+    from{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,20%);
+    }
+    to{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.main{
+    width: 85%;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    columns: 6;
+    &__item{
+        position: relative;
+        height: 25vh;
+        width: 16.666666666666668%;
+        border: .3vw solid #fff;
+        border-bottom: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img[src="assets/images/car.png"]{
+            width: 90%;
+            height: 90%;
+            animation: carAnimation 1s ease-out;
+        }
+        img[src="assets/images/plus.svg"]{
+            width: 60%;
+            height: 60%;
+            transition: transform .5s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        &__button{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            padding: 1.5vh;
+            border-radius: 1vw;
+            background: rgb(58, 58, 58);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+
+        }
+    }
+    &__item:nth-child(7){
+        transform: rotate(180deg);
+        margin-top: 20vh;
+    }
+    &__item:nth-child(7) .main__item__button{
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+    &__item:nth-child(8){
+        transform: rotate(180deg);
+        margin-top: 20vh;
+    }
+    &__item:nth-child(8) .main__item__button{
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+    &__item:nth-child(9){
+        transform: rotate(180deg);
+        margin-top: 20vh;
+    }
+    &__item:nth-child(9) .main__item__button{
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+    &__item:nth-child(10){
+        transform: rotate(180deg);
+        margin-top: 20vh;
+    }
+    &__item:nth-child(10) .main__item__button{
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+    &__item:nth-child(11){
+        transform: rotate(180deg);
+        margin-top: 20vh;
+    }
+    &__item:nth-child(11) .main__item__button{
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+    &__item:nth-child(12){
+        transform: rotate(180deg);
+        margin-top: 20vh;
+    }
+    &__item:nth-child(12) .main__item__button{
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+}

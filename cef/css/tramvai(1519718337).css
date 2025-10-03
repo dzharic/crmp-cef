@@ -1,0 +1,89 @@
+  .ostan {
+    font-size: 25px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 1417.28px;
+    top: 435.375px;
+    width: 567.191px;
+    height: 53px;
+    text-shadow: -1px 1px 5px #000; 
+    z-index: 8;
+  }
+  .sallary {
+    font-size: 25px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    left: 1417.28px;
+    top: 465.039px;
+    width: 873.379px;
+    height: 32.328px;
+    text-shadow: -1px 1px 5px #000; 
+    z-index: 7;
+  }
+  .speedtramv {
+    font-size: 25px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+
+    position: absolute;
+    left: 1417.28px;
+    top: 402.875px;
+    width: 540.757px;
+    height: 29px;
+    text-shadow: -1px 1px 5px #000; 
+    z-index: 6;
+  }
+  .texttramv {
+    font-size: 25px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+
+    position: absolute;
+    left: 1550.452px;
+    top: 360.375px;
+    width: 528.215px;
+    height: 29px;
+    text-shadow: -1px 1px 5px #000; 
+    z-index: 5;
+  }
+  .backtramv {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 17px;
+    position: absolute;
+    left: 1386px;
+    top: 350px;
+    width: 514px;
+    height: 186px;
+    z-index: 4;
+  }
+  .backtramv2 {
+    border-width: 0.66px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 17px;
+    background-color: rgb(124, 127, 132);
+    opacity: 0.4;
+    position: absolute;
+    left: 1386px;
+    top: 350px;
+    width: 514px;
+    height: 186px;
+    z-index: 3;
+  }
+  

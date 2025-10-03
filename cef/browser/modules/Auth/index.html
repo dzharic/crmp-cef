@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/noty.css">
+	<link rel="stylesheet" href="assets/css/theme.css">
+	<link rel="stylesheet" href="assets/css/u.css">
+	<link rel="stylesheet" href="assets/css/auth.css" />
+	<link rel="stylesheet" href="assets/css/auth_new.css" />
+	<link rel="stylesheet" href="../../assets/fonts/bebas-neue/stylesheet.css">
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+</head>
+
+<body>
+	<script>Vue.filter('formatThousands', (x) => {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");})</script> 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="./assets/js/notify.js"></script>
+	<script src="./assets/js/noty.min.js"></script>
+	<script src="./assets/js/u.js"></script>
+	<script src="./assets/js/auth.js"></script>
+</body>
+<script>
+	cef.on('cef:add:notynew', (type, layout, message, time) => {
+        notify(type, layout, message, time);
+	});
+</script>
+</html>

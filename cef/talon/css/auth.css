@@ -1,0 +1,310 @@
+.auth_background {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.auth_main_text {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: Montserrat;
+    font-style: bold;
+}
+
+.auth_text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: Montserrat;
+    font-style: bold;
+}
+
+.auth_main_button {
+    position: absolute;
+    width: 10%;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: Montserrat;
+    font-style: bold;
+}
+
+.talon_background {
+    width: 55.2%;
+    height: 55%;
+    position: absolute;
+    top: 35%;
+    left: 29.9%;
+    margin: -125px 0 0 -125px;
+    background: linear-gradient(#51bce8, #d0eff1);
+	border-radius: 9px;
+}
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+	position: absolute;
+	height: 90%;
+	width: 50%;
+	top: 17%;
+	left: 33%;
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes removeBG {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+	position: absolute;
+	height: 82.2%;
+	width: 42.4%;
+	top: 21%;
+	left: 36.8%;
+    transform: rotate(90deg);
+	background: linear-gradient(white, white);
+  }
+}
+.talon_zapis {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: 0%;
+    text-align: center;
+    font-size: 80px;
+    color: #095589;
+    font-family: Arial;
+    font-style: bold;
+}
+
+.box_1 {
+    position: relative;
+    width: 42%;
+    height: 22%;
+    border: 0px solid;
+    background-color: #ebf0f4;
+    top: 37%;
+    left: 2%;
+    font-size: 28px;
+    font-family: Arial;
+    font-style: normal;
+    cursor: pointer;
+	border-radius: 10px;
+}
+
+.box_2 {
+    position: relative;
+    width: 42%;
+    height: 22%;
+    border: 0px solid;
+    background-color: #ebf0f4;
+    top: 40%;
+    left: 8%;
+    font-size: 28px;
+    font-family: Arial;
+    font-style: normal;
+    cursor: pointer;
+	border-radius: 10px;
+}
+
+.box_3 {
+    position: relative;
+    width: 52%;
+    height: 22%;
+    border: 0px solid;
+    background-color: #ebf0f4;
+    top: 45%;
+    left: 23%;
+    font-size: 28px;
+    font-family: Arial;
+    font-style: normal;
+    cursor: pointer;
+    text-align: center;
+	border-radius: 10px;
+}
+
+
+.box_3:hover {
+	background-color: #f5f5f5;
+    color: orange;
+    transition: 0.5s;
+}
+
+.box_2:hover {
+	background-color: #f5f5f5;
+    color: orange;
+    transition: 0.5s;
+}
+
+.box_1:hover {
+	background-color: #f5f5f5;
+    color: orange;
+    transition: 0.5s;
+}
+
+.raspis-img {
+    position: relative;
+    top: 53%;
+    left: -22%;
+}
+
+
+
+.ipad-img
+{
+	position:absolute;
+	left: 25.1%;
+	top:32.4%;
+	width: 65%;
+	height: 59.8%;
+	margin: -125px 0 0 -125px;
+	transform: rotate(0deg);
+}
+
+.ipad-img-talon
+{
+	animation: infinite-spinning 3s infinite;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.talon_background-remove
+{
+	animation: removeBG 3s infinite;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.result_text
+{
+	display:none;
+	position: absolute;
+	left: 33%;
+	top: 10%;
+}
+
+.talon_text
+{
+	display:none;
+	position: absolute;
+	text-align:center;
+	left: 40%;
+	top: 45%;
+}
+
+.pay_text
+{
+	display:none;
+	position: absolute;
+	text-align:center;
+	left: 36%;
+	top: 15%;
+}
+
+.number_talon
+{
+	display:none;
+	position: absolute;
+	text-align:center;
+	left: 43%;
+	top: 60%;
+	font-size: 100px;
+}
+
+.yes_button {
+    position: absolute;
+    width: 19%;
+    height: 10%;
+    border: 0px solid;
+    background-color: #006400;
+	color:white;
+    top: 65%;
+	left: 31.5%;
+    font-size: 28px;
+    font-family: Arial;
+    font-style: normal;
+    cursor: pointer;
+	border-radius: 10px;
+	text-align: center;
+		padding-right: 5px;
+}
+
+.innerButton
+{
+	position: relative;
+	left: 13%;
+}
+
+.no_button
+{
+    position: absolute;
+    width: 19%;
+    height: 10%;
+    border: 0px solid;
+    background-color: red;
+	color:white;
+    top: 65%;
+	left: 52.5%;
+    font-size: 28px;
+    font-family: Arial;
+	font-style: normal;
+    cursor: pointer;
+	border-radius: 10px;
+}
+
+.no_button:hover
+{
+	transition: 1s;
+	transform: scale(1.05);
+}
+
+.yes_button:hover
+{
+	transition: 1s;
+	transform: scale(1.05);
+}
+
+.pay_img
+{
+	position: relative;
+	margin-top: 33.5%;
+	left: 34%;
+}
+
+.exit-talon
+{
+	position: relative;
+	width: 7%; height: 13%;
+	cursor:pointer;
+	top: -28%;
+	right: -36%;
+}
+
+.exit_talon-move
+{
+	position: relative;
+	width: 5%; height: 13%;
+	cursor:pointer;
+	left: 68%;
+	margin-top: 3%;
+}
+
+.exit_talon-move1
+{
+	position: relative;
+	width: 5%; height: 13%;
+	cursor:pointer;
+	left: 68%;
+	margin-top: -34%;
+}

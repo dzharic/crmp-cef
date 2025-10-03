@@ -1,0 +1,53 @@
+.neon {
+	width: 200px;
+	display: flex;
+	height: auto;
+}
+.neoncontent h2 {
+	font-size: 14px;
+	color: white;
+	margin-bottom: 15px;
+    margin-left: 25px;
+}
+.neoncontent h3 {
+    font-size: 12px;
+    color: white;
+    margin-left: 20px;
+}
+.neoncontent h3 span {
+    color: #44944A;
+    margin-right: 20px;
+    float: right;
+}
+.neoncontent {
+    width: 250px;
+    background: rgba(26,28,33,0.93);
+    height: auto;
+    float: right;
+    right: 50px;
+    top: 100px;
+    border-radius: 5px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.neonbutton{
+    display: inline-block;
+    font-size:12px;
+    text-decoration:none;
+    padding:10px 20px; 
+    color:#ffffff;
+    background:#34363A;
+    border-radius:5px;
+
+}
+.neo {
+	width: 200px;
+	height: 45px;
+	margin-bottom: 15px;
+	background: rgba(52,54,58,0.9);
+	border-radius: 5px;
+	margin-left: 25px;
+	cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/styles.css"><!--Подключение Css-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script><!--Подключение VueJS-->
+    <!-- Подключение Шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <!--  -->
+    <title>Parking</title>
+</head>
+<body>
+    <div class="wrapper" v-if="active">
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <div class="title">Парковка #<span>{{number}}</span></div>
+                    <div class="subtitle"><span>{{freePlace}}</span>/12 свободно</div>
+                </div>
+                <div class="info">Чтобы забронировать место нажмите на знак плюс.<br>Цена бронирования <span>1000 рублей</span><br><br>Машина будет стоять тут до вашего выхода из игры<br>С парковки никто не эвакуирует и не украдёт ваше авто</div>
+                <div class="exit"><img src="assets/images/exit.svg" alt="close" onclick="CloseInterfaceParking()"></div>
+            </div>
+        </header>
+        <main>
+            <div class="main">
+                <div class="main__item" v-for="(car, index) in cars">
+                    <img src="assets/images/car.png" alt="car" v-if="car[0] == 1 || car[0] == 2">
+                    <img src="assets/images/plus.svg" alt="+" @click="addCar(index++)" v-if="car[0] == 0">
+                    <div class="main__item__button" v-if="car[0] == 2" @click="tbCar(index++)">Забрать <br>{{car[1]}}</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script><!--Подключение JS-->
+</body>
+
+</html>

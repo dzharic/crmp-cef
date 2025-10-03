@@ -1,0 +1,83 @@
+.uiselect .left {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: rgb(235, 76, 66, 0.38);
+    background-color: rgba(235, 76, 66, 0.021);
+    position: absolute;
+    left: 786px;
+    top: 900px;
+    width: 79.5px;
+    height: 39.5px;
+    font-size: 21.333px;
+    font-family: Montserrat;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+    outline: none;
+}
+
+.uiselect .selec {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: rgb(235, 76, 66, 0.38);
+    background-color: rgba(235, 76, 66, 0.021);
+    position: absolute;
+    left: 886px;
+    top: 900px;
+    width: 109.5px;
+    height: 39.5px;
+    font-size: 21.333px;
+    font-family: Montserrat;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+    outline: none;
+}
+
+.uiselect .right {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: rgb(235, 76, 66, 0.38);
+    background-color: rgba(235, 76, 66, 0.021);
+    position: absolute;
+    left: 1016px;
+    top: 900px;
+    width: 79.5px;
+    height: 39.5px;
+    font-size: 21.333px;
+    font-family: Montserrat;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+    outline: none;
+}
+
+.uiselect .left:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    background-color: rgba(182, 45, 35, 0.753);
+    color: white;
+}
+
+.uiselect .right:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    background-color: rgba(182, 45, 35, 0.753);
+    color: white;
+}
+
+.uiselect .selec:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    background-color: rgba(182, 45, 35, 0.753);
+    color: white;
+}
